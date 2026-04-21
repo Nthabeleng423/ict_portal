@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Learning Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ICT Learning Portal</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section">
+    <h2>Welcome</h2>
+    <p>This platform helps ICT students and lecturers share notes, updates, and resources.</p>
+    <button onclick="showMessage()">Click Me</button>
+</section>
+
+<!-- NOTES -->
+<section id="notes" class="section">
+    <h2>Study Notes</h2>
+
+    <div class="card">
+        <h3>Programming Basics</h3>
+        <p>Learn variables, loops, and functions.</p>
+    </div>
+
+    <div class="card">
+        <h3>Database Fundamentals</h3>
+        <p>Understand tables, keys, and queries.</p>
+    </div>
+</section>
+
+<!-- ANNOUNCEMENTS -->
+<section id="announcements" class="section">
+    <h2>Announcements</h2>
+    <ul>
+        <li>📢 Test 1 on Friday</li>
+        <li>📢 Assignment due next week</li>
+        <li>📢 New notes uploaded</li>
+    </ul>
+</section>
+
+<!-- CERTIFICATE GENERATOR -->
+<section id="certificate" class="section">
+    <h2>Certificate Generator</h2>
+
+    <input type="text" id="studentName" placeholder="Enter participant name">
+
+    <div class="buttons">
+        <button onclick="generateCertificate()">Generate Certificate</button>
+        <button onclick="printCertificate()">Print Certificate</button>
+    </div>
+
+    <div id="certificatePreview" class="certificate">
+        <h1>Certificate of Completion</h1>
+        <p>This certifies that</p>
+        <h2 id="nameDisplay">[Name]</h2>
+        <p>has successfully completed the ICT course</p>
+        <p class="date">Date: 2026</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Lecturer</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 ICT Portal | Designed for Students & Lecturers</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function showMessage() {
+    alert("Welcome to the ICT Portal!");
+}
+
+function generateCertificate() {
+    let name = document.getElementById("studentName").value;
+
+    if (name === "") {
+        alert("Please enter a name");
+        return;
+    }
+
+    document.getElementById("nameDisplay").innerText = name;
+}
+
+function printCertificate() {
+    window.print();
+}
+</script>
+
+</body>
+</html>

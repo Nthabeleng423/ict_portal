@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Colors */
+:root {
+    --navy: #001f3f;
+    --white: #ffffff;
+}
+
+/* Header */
+header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background: #f4f4f4;
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px auto;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+button {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #003366;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Certificate Section */
+#certificate input {
+    padding: 10px;
+    width: 250px;
+}
+
+.buttons {
+    margin: 15px;
+}
+
+/* Certificate Design */
+.certificate {
+    margin: 30px auto;
+    padding: 40px;
+    width: 600px;
+    border: 5px solid #001f3f;
+    background: white;
+    text-align: center;
+}
+
+.certificate h1 {
+    color: #001f3f;
+    margin-bottom: 20px;
+}
+
+.certificate h2 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+.date {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+}
+
+/* PRINT ONLY CERTIFICATE */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .certificate, .certificate * {
+        visibility: visible;
+    }
+
+    .certificate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
